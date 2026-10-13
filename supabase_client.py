@@ -1,0 +1,5 @@
+"""One shared Supabase client using the service-role key (server-side only)."""
+from supabase import create_client
+from config import Config
+
+supabase = create_client(Config.SUPABASE_URL, Config.SUPABASE_SERVICE_ROLE_KEY)
